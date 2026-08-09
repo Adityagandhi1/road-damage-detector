@@ -1,0 +1,25 @@
+[theme]
+base = "dark"
+primaryColor = "#386EFF"
+backgroundColor = "#0D1117"
+secondaryBackgroundColor = "#161B22"
+textColor = "#E6EDF3"
+
+[server]
+# Uploads are dashcam stills and road photos; the default 200MB cap is more than
+# enough and keeps a stray video from being uploaded to the image page.
+maxUploadSize = 50
+headless = true
+
+# Streamlit's hot-reload watcher enumerates every loaded module and reads
+# `module.__path__._path`. `torch.classes` is a shim that forwards unknown attributes
+# to PyTorch's C++ custom-class registry, so that lookup raises RuntimeError and
+# Streamlit logs a full traceback on every rerun. Harmless, but it buries real errors
+# in noise. Disabling the watcher removes it entirely.
+#
+# Trade-off: editing a source file no longer auto-reloads the app - restart it, or set
+# this to "auto" while developing and accept the log spam.
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

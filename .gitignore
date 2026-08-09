@@ -1,0 +1,36 @@
+# --- model weights ---
+# Trained weights are ~6MB; regenerate via training/train_yolo26_rdd.ipynb.
+# Ship them as a GitHub Release asset rather than committing binaries.
+models/*.pt
+models/*.onnx
+!models/.gitkeep
+
+# Ultralytics downloads weights into the working directory when handed a bare
+# model name, so stray copies can appear at the repo root.
+/*.pt
+/*.onnx
+
+# --- runtime data ---
+data/detections.db
+data/uploads/
+data/results/
+
+# samples/ at the repo root is deliberately NOT ignored - the demo images are
+# curated inputs committed with the project, not generated output.
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# --- ultralytics ---
+runs/
+
+# --- os / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

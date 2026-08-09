@@ -1,0 +1,24 @@
+# Road Damage Detection - runtime dependencies
+# CPU-only inference. No CUDA build required.
+
+# --- detection ---
+ultralytics>=8.4.0          # YOLO26 support landed in 8.4.x
+torch>=2.5.0
+torchvision>=0.20.0
+onnxruntime>=1.19.0         # faster CPU backend than PyTorch for this model
+
+# --- imaging ---
+opencv-python>=4.10.0
+pillow>=11.0.0
+numpy>=2.0.0
+
+# --- app ---
+streamlit>=1.40.0
+pandas>=2.2.0
+
+# --- map ---
+folium>=0.18.0
+streamlit-folium>=0.24.0
+
+# --- tests ---
+pytest>=8.0.0

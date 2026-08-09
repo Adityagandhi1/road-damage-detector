@@ -47,7 +47,7 @@ Image / Video ──▶ YOLO ──▶ Severity scoring ──▶ SQLite ──�
 ## Quickstart
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/IhsanKT/road-damage-detector.git
 cd road-damage-detector
 
 python -m venv .venv && .venv\Scripts\activate      # Windows
